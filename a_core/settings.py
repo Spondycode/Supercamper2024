@@ -5,8 +5,8 @@ Django settings for a_core project.
 from pathlib import Path
 import environ
 env = environ.Env()
- # set casting, default value
-    DEBUG=(bool, False))
+# set casting, default value
+DEBUG = bool(False)
 # reading .env file
 environ.Env.read_env()
 
@@ -23,7 +23,10 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1'
+    'localhost:8000'
+]
 
 
 # Application definition
@@ -35,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    "a_plots"
 ]
 
 MIDDLEWARE = [

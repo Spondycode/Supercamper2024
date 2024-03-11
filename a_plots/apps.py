@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class APostsConfig(AppConfig):
+class APlotsConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "a_posts"
+    name = "a_plots"
